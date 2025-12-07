@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{%block head %}
+
+{% endblock %}
+
+{%block body %}
+
+    <div class="Meme_Generator">
+        <h1>Meme Generator</h1>
+        <form action="/generate-meme" method="post" enctype="multipart/form-data">
+            <div class="image_input">
+                <label for="image">Chose a file</label>
+                <input type="file" id= 'image' name="image" accept="image/*">
+            </div>
+            
+            <div class="input-group">
+                <label for="upper_text">Upper text</label>
+                <input type="text" id="upper_text" name="upper_text" placeholder="ultra funny meme">
+            </div>
+            
+            <div class="input-group">
+                <label for="bottom_text">Bottom text</label>
+                <input type="text" id="bottom_text" name="bottom_text" placeholder="ultra funny meme">
+            </div>
+            
+            <button type="submit">Generate Meme </button>
+       </form>
+
+        {% if meme_url %}
+            <div class="meme">
+                <h2>Your Meme:</h2>
+                <img src="{{ meme_url }}" alt="Generated Meme">
+            </div>
+        {% endif %}
+        
+    </div>
+{% endblock %}
+
