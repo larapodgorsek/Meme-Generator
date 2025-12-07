@@ -1,0 +1,20 @@
+
+# ime workflowa
+name: Docker Build
+
+# dogodek, ki sporži workflow
+on:
+  push: # sproži ob push na main
+    branches: [main]
+
+jobs: 
+  Build:
+    # določa vritualni sistem
+    runs-on: ubuntu-latest 
+    # koraki ki jih bo izvedel
+    steps:
+      # pridobi datoteke it GitHub
+      - uses: actions/checkout@v3
+      - name: Build Docker image
+      # izvede ukaz
+        run: docker build -t meme-generator .
