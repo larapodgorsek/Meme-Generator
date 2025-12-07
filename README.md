@@ -29,7 +29,8 @@ Odpri aplikacijo v brskalniku:
         http://127.0.0.1:5000
 
 
-#Struktura projekta
+Struktura projekta
+  
     Meme_generator/
     │
     ├── app.py              
