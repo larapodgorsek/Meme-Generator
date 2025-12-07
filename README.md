@@ -5,41 +5,35 @@ Meme Generator je preprosta spletna aplikacija, ki uporabniku omogoča ustvarjan
 
 Tehnologije:
 
-Backend: Python, Flask, Pillow
-
-Frontend: HTML, CSS
-
-Docker: za zagon aplikacije v kontejnerju
+    Backend: Python, Flask, Pillow
+    Frontend: HTML, CSS
+    Docker: za zagon aplikacije v kontejnerju
 
 Namestitev in zagon
 
-Kloniraj repozitorij:
+    Kloniraj repozitorij:
 
-git clone https://github.com/larapodgorsek/Meme-Generator.git
+        git clone https://github.com/larapodgorsek/Meme-Generator.git
 
-cd meme-generator
-
-
-Zagon preko Dockerja:
-
-docker build -t meme-generator .
-
-docker run -p 5000:5000 meme-generator
+        cd meme-generator
 
 
-Odpri aplikacijo v brskalniku:
+    Zagon preko Dockerja:
 
-http://127.0.0.1:5000
+        docker build -t meme-generator .
+
+        docker run -p 5000:5000 meme-generator
 
 
-Zdaj lahko naložiš sliko in ustvariš svoj meme.
+    Odpri aplikacijo v brskalniku: http://127.0.0.1:5000
+
 
 Struktura projekta
 Meme_generator/
 │
-├── app.py              # Flask aplikacija
-├── Dockerfile          # Docker konfiguracija
-├── requirements.txt    # Python odvisnosti
-├── templates/          # HTML predloge
-├── static/             # CSS, slike
-└── README.md           # Ta datoteka
+├── app.py              
+├── Dockerfile          
+├── requirements.txt    
+├── templates/          
+├── static/             
+└── README.md           
